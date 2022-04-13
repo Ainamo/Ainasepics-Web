@@ -1,0 +1,8 @@
+Data/Backup.json
+Data/Resources.json
+Data/test.json
+
+obj/
+Properties/
+bin/
+.vscode/
