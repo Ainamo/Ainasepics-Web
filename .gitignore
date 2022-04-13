@@ -1,7 +1,8 @@
 Data/Backup.json
 Data/Resources.json
-Data/test.json
+Data/test.js
 
+appsettings.*
 obj/
 Properties/
 bin/
