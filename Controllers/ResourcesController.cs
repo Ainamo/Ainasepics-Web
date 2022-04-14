@@ -4,12 +4,13 @@ using System.Text.Json;
 namespace AinasepicsApi.Controllers;
 
 [ApiController]
-[Route("/api/v2/Resources.json")]
+[Route("/api/v2/get-resource")]
 public class ResourcesController : ControllerBase
 {
     public Random rnd = new Random();
 
     [HttpGet]    
+    [Produces("application/json")]
     public dynamic Get(string name, int? limit = null)
     {
         string ResourcesJson = System.IO.File.ReadAllText("Data/Resources.json");
@@ -56,11 +57,11 @@ public class ResourcesController : ControllerBase
                 int ri = rnd.Next(0, filteredURLs.Length);
                 items.Add(filteredURLs[ri]);
             }
-            return JsonSerializer.Serialize(items);
+            return Ok(items);
         }
 
         var i = rnd.Next(0, urls.Length);
         urls[i]["animated"] = animated;
-        return JsonSerializer.Serialize(urls[i]);
+        return Ok(urls[i]);
     }
 }
