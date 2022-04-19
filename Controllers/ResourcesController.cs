@@ -55,6 +55,10 @@ public class ResourcesController : ControllerBase
 
                 if (filteredURLs.Count() == 0) break; // No more URLs, stop adding items.
                 int ri = rnd.Next(0, filteredURLs.Length);
+                
+                if (filteredURLs[ri].ContainsKey("source")) 
+                    filteredURLs[ri].Remove("source"); // Remove because it is not done yet.
+
                 filteredURLs[ri]["animated"] = animated;
                 items.Add(filteredURLs[ri]);
             }
@@ -62,6 +66,9 @@ public class ResourcesController : ControllerBase
         }
 
         var i = rnd.Next(0, urls.Length);
+        if (urls[i].ContainsKey("source")) 
+            urls[i].Remove("source"); // Remove because it is not done yet.
+        
         urls[i]["animated"] = animated;
         return Ok(urls[i]);
     }
