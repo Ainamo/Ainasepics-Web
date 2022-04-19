@@ -15,7 +15,7 @@
 * I said it at the start
 ###### URL
     /api/v2/get-resource
-###### Paramaters
+###### Parameters
 * `name`  - See [names](#names) - **(required)**
 * `limit` - Limit of resources to get
 
