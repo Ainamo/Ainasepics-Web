@@ -28,7 +28,6 @@
 ```json
 {
     "url": "https://i.ibb.co/YdQPpJM/hug-q-B2t-M-min.gif",
-    "source": null,
     "animated":true
 }
 ```
@@ -41,27 +40,22 @@
 [
     {
         "url": "https://i.ibb.co/C83B50T/hug-Nz9-Ve-min.gif",
-        "source": null,
         "animated": true
     },
     {
         "url": "https://i.ibb.co/k9Z3gsm/hug-lrlwi-min.gif",
-        "source": null,
         "animated": true
     },
     {
         "url": "https://i.ibb.co/HnJ5jYw/hug-w-DKKy-min.gif",
-        "source": null,
         "animated": true
     },
     {
         "url": "https://i.ibb.co/bBbCmc9/hug-DYwpf-min.gif",
-        "source": null,
         "animated": true
     },
     {
         "url": "https://i.ibb.co/qpfwXTn/hug-93bjo-min.gif",
-        "source": null,
         "animated": true
     }
 ]
