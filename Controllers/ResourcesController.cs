@@ -27,12 +27,10 @@ public class ResourcesController : ControllerBase
 
         bool animated = false; 
 
-        string[] gifNames = data["gifs"].Keys.ToArray();
-        string[] imageNames = data["images"].Keys.ToArray();
-
-        // Name validation
-        if (Array.Exists(gifNames, gn => gn == n)) { urls = data["gifs"][n]; animated = true; }
-        else if (Array.Exists(imageNames, _in => _in == n)) urls = data["images"][n];
+        /////// Name validation ////////
+        if (data["gifs"].ContainsKey(n)) { urls = data["gifs"][n]; animated = true; }
+        if (data["images"].ContainsKey(n)) urls = data["images"][n];
+        ////////////////////////////////
 
         if (urls == null) return Problem(
             title: "Bad Request",
