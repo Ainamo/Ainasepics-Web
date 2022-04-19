@@ -55,6 +55,7 @@ public class ResourcesController : ControllerBase
 
                 if (filteredURLs.Count() == 0) break; // No more URLs, stop adding items.
                 int ri = rnd.Next(0, filteredURLs.Length);
+                filteredURLs[ri]["animated"] = animated;
                 items.Add(filteredURLs[ri]);
             }
             return Ok(items);
